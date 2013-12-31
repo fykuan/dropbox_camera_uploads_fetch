@@ -5,7 +5,6 @@ import json
 import re
 import sys
 
-
 apikey = ''
 apisecret = ''
 accesstoken=''
@@ -41,7 +40,6 @@ except IOError:
         print "apikey.json not found"
         sys.exit(0)
 
-
 client = dropbox.client.DropboxClient(accesstoken)
 
 # 取得/Camera Uploads資料夾內容
@@ -50,7 +48,7 @@ folder_metadata = client.metadata('/Camera Uploads')
 for i in range(0,len(folder_metadata['contents'])):
     abs_filepath = folder_metadata['contents'][i]['path']
     filename = re.match("^.*/(.*)$", abs_filepath).group(1)
-    ofile = open(path+"/"+filename, "w+")
+    ofile = open(path + "/" + filename, "w+")
     f, metadata = client.get_file_and_metadata(abs_filepath)
 
     # 寫入檔案
