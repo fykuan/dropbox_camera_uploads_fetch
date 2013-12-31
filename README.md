@@ -26,9 +26,9 @@ dropbox_camera_uploads_fetch
 
 ### 執行
 
-1. 執行dropbox_camera_uploads_bak.py [儲存目錄]，例：
+1. 執行dropbox_camera_uploads_fetch.py [儲存目錄]，例：
 
-		dropbox_camera_uploads_bak.py /tmp
+		dropbox_camera_uploads_fetch.py /tmp
 		
 2.	初次執行要到程式提示的網誌確認後取得authorization code並輸入進程式中
 
